@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="28px" viewBox="0 0 47 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_mastercard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Главная" transform="translate(-194.000000, -699.000000)">
+            <g id="способы" transform="translate(65.000000, 646.000000)">
+                <g id="icon_mastercard" transform="translate(129.000000, 53.000000)">
+                    <polygon id="Path" fill="#E15D29" points="17 25 30 25 30 3 17 3"></polygon>
+                    <path d="M17.5705233,14 C17.5705233,9.5342614 19.6939264,5.55716254 23,2.99343375 C20.5815708,1.11843018 17.5309433,0 14.2147384,0 C6.3639957,0 0,6.26837079 0,14 C0,21.7316292 6.3639957,28 14.2147384,28 C17.5309433,28 20.5815708,26.8815698 23,25.0065663 C19.6939264,22.4429705 17.5705233,18.4657386 17.5705233,14" id="Path" fill="#D2232C"></path>
+                    <path d="M47,13.9995343 C47,21.732352 40.6357426,28 32.7846772,28 C29.4683359,28 26.417583,26.8815326 24,25.0064667 C27.3062095,22.4437169 29.4288894,18.4655545 29.4288894,13.9995343 C29.4288894,9.53364727 27.3062095,5.55641609 24,2.99260203 C26.417583,1.11846738 29.4683359,0 32.7846772,0 C40.6357426,0 47,6.26764799 47,13.9995343 Z" id="Path" fill="#EC972D"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

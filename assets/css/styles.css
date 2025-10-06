@@ -1,0 +1,190 @@
+
+
+.slider-thumb::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.slider-thumb::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* FAQ accordion styles */
+/* Smooth accordion transitions */
+[x-cloak] { display: none !important; }
+
+/* Custom focus styles */
+button:focus {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 2px;
+}
+
+/* Improved readability for long text */
+.leading-relaxed {
+    line-height: 1.6;
+}
+/* End: FAQ accordion styles */
+
+/* Footer styles */
+/* Smooth transitions for all interactive elements */
+a, button {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Improve readability for long text */
+.text-sm {
+    line-height: 1.5;
+}
+/* End: Footer styles */
+
+
+/* Request page styles */
+.slider-thumb::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.slider-thumb::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Smooth transitions */
+[x-cloak] { display: none !important; }
+/* End: Request page styles */
+
+/* Documents page styles */
+/* Smooth hover transitions */
+.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+}
+
+/* Ensure proper spacing */
+.space-y-8 > * + * {
+    margin-top: 2rem;
+}
+
+.space-y-3 > * + * {
+    margin-top: 0.75rem;
+}
+/* End: Documents page styles */
+
+/* Contact page styles */
+/* Smooth transitions for interactive elements */
+a, button {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Improve readability */
+.leading-relaxed {
+    line-height: 1.6;
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+/* End: Contact page styles */
+
+/* Login page styles */
+/* Custom styles for better appearance */
+input::placeholder {
+    color: #9CA3AF;
+    opacity: 1;
+}
+
+/* Smooth transitions */
+[x-cloak] { display: none !important; }
+
+/* Focus states */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Disabled state improvements */
+button:disabled {
+    opacity: 0.6;
+    transform: none !important;
+}
+
+/* Phone input formatting */
+input[type="tel"] {
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.5px;
+}
+/* End: Login page styles */
+
+/* Payment page styles */
+/* Custom styles for better appearance */
+input::placeholder {
+    color: #9CA3AF;
+    opacity: 1;
+}
+
+/* Date input styling */
+input[type="date"] {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #374151;
+}
+
+input[type="date"]:invalid {
+    color: #9CA3AF;
+}
+
+/* Focus states */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Smooth transitions */
+[x-cloak] { display: none !important; }
+
+/* Disabled state improvements */
+button:disabled {
+    opacity: 0.6;
+    transform: none !important;
+}
+
+/* Phone input formatting */
+input[type="tel"] {
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Payment method icons styling */
+.flex > div {
+    transition: transform 0.2s ease;
+}
+
+.flex > div:hover {
+    transform: translateY(-2px);
+}
+/* End: Payment page styles */

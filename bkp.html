@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО "МКК "Стройпроект" - Кредиты под залог недвижимости в Грозном</title>
+    <meta name="description" content="ООО 'МКК Стройпроект' - государственная микрокредитная компания в Грозном. Предоставляем денежные ссуды под залог недвижимости для физических и юридических лиц.">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-dark: #1e3a8a;
+            --secondary: #059669;
+            --accent: #d97706;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', system-ui, sans-serif;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary);
+        }
+        
+        .bg-primary-dark {
+            background-color: var(--primary-dark);
+        }
+        
+        .bg-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .bg-accent {
+            background-color: var(--accent);
+        }
+        
+        .bg-light {
+            background-color: var(--light);
+        }
+        
+        .bg-dark {
+            background-color: var(--dark);
+        }
+        
+        .text-primary {
+            color: var(--primary);
+        }
+        
+        .text-primary-dark {
+            color: var(--primary-dark);
+        }
+        
+        .text-secondary {
+            color: var(--secondary);
+        }
+        
+        .text-accent {
+            color: var(--accent);
+        }
+        
+        .text-light {
+            color: var(--light);
+        }
+        
+        .text-dark {
+            color: var(--dark);
+        }
+        
+        .text-gray {
+            color: var(--gray);
+        }
+        
+        .border-primary {
+            border-color: var(--primary);
+        }
+        
+        .border-secondary {
+            border-color: var(--secondary);
+        }
+        
+        .border-accent {
+            border-color: var(--accent);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #047857;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: #b45309;
+        }
+    </style>
+</head>
+<body x-data="{ mobileMenuOpen: false, currentSlide: 0 }">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg mr-3">
+                        МКК
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-dark">ООО "МКК "Стройпроект"</h1>
+                        <p class="text-sm text-gray">Государственная микрокредитная компания</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="font-medium text-primary border-b-2 border-primary pb-1">Главная</a>
+                    <a href="/apply" class="font-medium text-gray hover:text-primary transition">Подать заявку</a>
+                    <a href="/documents" class="font-medium text-gray hover:text-primary transition">Документы</a>
+                    <a href="/contact.html" class="font-medium text-gray hover:text-primary transition">Контакты</a>
+                    <a href="/payments" class="font-medium text-gray hover:text-primary transition">Внести платеж</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="/apply" class="btn-primary px-4 py-2 rounded-lg font-medium transition">Оформить заявку</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div x-show="mobileMenuOpen" class="md:hidden mt-4 py-4 border-t border-gray-light">
+                <nav class="flex flex-col space-y-4">
+                    <a href="/" class="font-medium text-primary">Главная</a>
+                    <a href="/apply" class="font-medium text-gray">Подать заявку</a>
+                    <a href="/documents" class="font-medium text-gray">Документы</a>
+                    <a href="/contact.html" class="font-medium text-gray">Контакты</a>
+                    <a href="/payments" class="font-medium text-gray">Внести платеж</a>
+                    <a href="/apply" class="btn-primary px-4 py-2 rounded-lg font-medium text-center mt-2">Оформить заявку</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-primary-dark text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-white/20 text-sm px-3 py-1 rounded-full mb-4">Государственная компания</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Кредиты под залог недвижимости в Грозном</h1>
+                <p class="text-xl mb-8 opacity-90">ООО "МКК "Стройпроект" - надежный партнер в решении ваших финансовых задач. Быстрое оформление, выгодные условия, государственная поддержка.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="/apply" class="btn-accent px-6 py-3 rounded-lg font-medium text-center">Оформить заявку онлайн</a>
+                    <a href="#advantages" class="bg-white/10 px-6 py-3 rounded-lg font-medium text-center backdrop-blur-sm">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Почему выбирают нас</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Advantage 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-light">
+                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Государственная поддержка</h3>
+                    <p class="text-gray">Единственным учредителем компании является Чеченская Республика, что гарантирует надежность и стабильность.</p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-light">
+                    <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Выгодные условия</h3>
+                    <p class="text-gray">Предлагаем конкурентные процентные ставки и гибкие условия погашения кредитов под залог недвижимости.</p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-light">
+                    <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Быстрое решение</h3>
+                    <p class="text-gray">Минимальные сроки рассмотрения заявок и оформления документов. Получите деньги в кратчайшие сроки.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Наши услуги</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-light p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-dark mb-4">Кредиты для физических лиц</h3>
+                    <p class="text-gray mb-6">Получите денежные средства под залог квартиры, дома, земельного участка или другой недвижимости.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Сумма кредита: от 100 000 до 5 000 000 рублей
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Срок кредитования: от 3 месяцев до 5 лет
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Процентная ставка: от 12% годовых
+                        </li>
+                    </ul>
+                    <a href="/apply" class="btn-primary inline-block px-5 py-2 rounded-lg font-medium">Подробнее</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-light p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-dark mb-4">Кредиты для юридических лиц</h3>
+                    <p class="text-gray mb-6">Финансирование бизнеса под залог коммерческой недвижимости, оборудования или других активов.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Сумма кредита: от 500 000 до 20 000 000 рублей
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Индивидуальные условия погашения
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Консультация по оптимизации налогообложения
+                        </li>
+                    </ul>
+                    <a href="/apply" class="btn-primary inline-block px-5 py-2 rounded-lg font-medium">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-2">Кредитный калькулятор</h2>
+                <p class="text-center opacity-90 mb-8">Рассчитайте примерные условия кредита под залог недвижимости</p>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                        <div>
+                            <label class="block mb-2">Сумма кредита, руб.</label>
+                            <input type="range" min="100000" max="5000000" step="100000" value="1000000" class="w-full">
+                            <div class="flex justify-between mt-1">
+                                <span>100 000</span>
+                                <span id="loanAmountValue">1 000 000</span>
+                                <span>5 000 000</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2">Срок кредита, мес.</label>
+                            <input type="range" min="3" max="60" step="1" value="24" class="w-full">
+                            <div class="flex justify-between mt-1">
+                                <span>3</span>
+                                <span id="loanTermValue">24</span>
+                                <span>60</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block mb-2">Процентная ставка, %</label>
+                            <input type="range" min="12" max="24" step="0.5" value="15" class="w-full">
+                            <div class="flex justify-between mt-1">
+                                <span>12</span>
+                                <span id="interestRateValue">15</span>
+                                <span>24</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/20 p-4 rounded-lg">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="opacity-80">Ежемесячный платеж:</p>
+                                <p class="text-xl font-bold" id="monthlyPayment">~ 48 500 руб.</p>
+                            </div>
+                            <div>
+                                <p class="opacity-80">Общая сумма выплат:</p>
+                                <p class="text-xl font-bold" id="totalPayment">~ 1 164 000 руб.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <a href="/apply" class="btn-accent px-6 py-3 rounded-lg font-medium inline-block">Оформить заявку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-dark mb-12">О компании</h2>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <p class="text-lg text-gray mb-6">ООО "МКК "Стройпроект" было зарегистрировано 20 января 2023 года в Грозном и специализируется на предоставлении денежных ссуд под залог недвижимости.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-dark mb-1">Руководство</h3>
+                                <p class="text-gray">С 5 декабря 2024 года директором компании является Магомадов Зелимхан Султанович.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary/10 p-3 rounded-lg mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-dark mb-1">Форма собственности</h3>
+                                <p class="text-gray">Единственным учредителем выступает Чеченская Республика через Министерство имущественных и земельных отношений ЧР.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-primary/5 p-4 rounded-lg">
+                        <h3 class="font-bold text-dark mb-2">Реквизиты компании</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <div><span class="font-medium">ОГРН:</span> 1232000000363</div>
+                            <div><span class="font-medium">ИНН:</span> 2014036265</div>
+                            <div><span class="font-medium">КПП:</span> 201401001</div>
+                            <div><span class="font-medium">ОКВЭД:</span> 64.92.3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Контакты</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Контактная информация</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-2 rounded-lg mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-medium">Адрес:</p>
+                                <p class="text-gray">364014, Чеченская Республика, г. Грозный, р-н Ахматовский, ул. А.А. Айдамирова, д. 133/2</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-2 rounded-lg mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-medium">Телефон:</p>
+                                <p class="text-gray">8 (926) 225-20-93</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-2 rounded-lg mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-medium">Email:</p>
+                                <p class="text-gray">info@mkk095.ru</p>
+                                <p class="text-gray">riaproekt95@yandex.ru</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-2 rounded-lg mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-medium">Telegram:</p>
+                                <p class="text-gray">@mkk095</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Оставить обращение</h3>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray mb-1">Ваше имя</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-light rounded-lg focus:outline-none focus:border-primary">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray mb-1">Телефон</label>
+                            <input type="tel" class="w-full px-4 py-2 border border-gray-light rounded-lg focus:outline-none focus:border-primary">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray mb-1">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border border-gray-light rounded-lg focus:outline-none focus:border-primary">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray mb-1">Сообщение</label>
+                            <textarea rows="4" class="w-full px-4 py-2 border border-gray-light rounded-lg focus:outline-none focus:border-primary"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full py-2 rounded-lg font-medium">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm mr-3">
+                            МКК
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">ООО "МКК "Стройпроект"</h3>
+                            <p class="text-sm opacity-80">Государственная микрокредитная компания</p>
+                        </div>
+                    </div>
+                    <p class="opacity-80 mb-4">Специализируемся на предоставлении денежных ссуд под залог недвижимости для физических и юридических лиц в Грозном и Чеченской Республике.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white/10 p-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-white/10 p-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-white/10 p-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold mb-4">Быстрые ссылки</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="opacity-80 hover:opacity-100 transition">Главная</a></li>
+                        <li><a href="/apply" class="opacity-80 hover:opacity-100 transition">Подать заявку</a></li>
+                        <li><a href="/documents" class="opacity-80 hover:opacity-100 transition">Документы</a></li>
+                        <li><a href="/contact.html" class="opacity-80 hover:opacity-100 transition">Контакты</a></li>
+                        <li><a href="/payments" class="opacity-80 hover:opacity-100 transition">Внести платеж</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Footer -->
+                <div>
+                    <h4 class="font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                            <span>г. Грозный, ул. А.А. Айдамирова, д. 133/2</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span>8 (926) 225-20-93</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <span>info@mkk095.ru</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-6 text-center text-sm opacity-70">
+                <p>© 2023 ООО "МКК "Стройпроект". Все права защищены.</p>
+                <p class="mt-1">ОГРН: 1232000000363, ИНН: 2014036265, КПП: 201401001</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple loan calculator functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const loanAmountSlider = document.querySelector('input[type="range"][min="100000"]');
+            const loanTermSlider = document.querySelector('input[type="range"][min="3"]');
+            const interestRateSlider = document.querySelector('input[type="range"][min="12"]');
+            
+            const loanAmountValue = document.getElementById('loanAmountValue');
+            const loanTermValue = document.getElementById('loanTermValue');
+            const interestRateValue = document.getElementById('interestRateValue');
+            const monthlyPayment = document.getElementById('monthlyPayment');
+            const totalPayment = document.getElementById('totalPayment');
+            
+            function formatCurrency(value) {
+                return new Intl.NumberFormat('ru-RU').format(value) + ' руб.';
+            }
+            
+            function calculateLoan() {
+                const amount = parseInt(loanAmountSlider.value);
+                const term = parseInt(loanTermSlider.value);
+                const rate = parseFloat(interestRateSlider.value) / 100 / 12; // Monthly rate
+                
+                // Calculate monthly payment using the formula for annuity loans
+                const monthly = amount * (rate * Math.pow(1 + rate, term)) / (Math.pow(1 + rate, term) - 1);
+                const total = monthly * term;
+                
+                // Update display values
+                loanAmountValue.textContent = formatCurrency(amount);
+                loanTermValue.textContent = term;
+                interestRateValue.textContent = parseFloat(interestRateSlider.value).toFixed(1);
+                monthlyPayment.textContent = '~ ' + formatCurrency(Math.round(monthly));
+                totalPayment.textContent = '~ ' + formatCurrency(Math.round(total));
+            }
+            
+            // Add event listeners to sliders
+            [loanAmountSlider, loanTermSlider, interestRateSlider].forEach(slider => {
+                slider.addEventListener('input', calculateLoan);
+            });
+            
+            // Initial calculation
+            calculateLoan();
+        });
+    </script>
+</body>
+</html>
